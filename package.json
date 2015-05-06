@@ -1,0 +1,20 @@
+{
+  "name": "postcode-validator",
+  "version": "1.0.12",
+  "description": "Validate postcodes based on country",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/melwynfurtado/postcode-validator"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postcode",
+    "validation"
+  ],
+  "author": "Melwyn Furtado <melwynfurtado@gmail.com>",
+  "license": "ISC",
+  "readmeFilename": "README.md"
+}
