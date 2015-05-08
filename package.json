@@ -4,7 +4,7 @@
   "description": "Validate postcodes based on country",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mfurtado-mdsol/postcode-validator"
+    "url": "git@github.com:melwynfurtado/postcode-validator"
   },
   "main": "./lib/index.js",
   "scripts": {
