@@ -1,0 +1,48 @@
+{
+  "name": "postcode-validator",
+  "version": "1.1.5",
+  "description": "Validate postcodes based on country",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mfurtado-mdsol/postcode-validator"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "node test/all"
+  },
+  "keywords": [
+    "postcode",
+    "validation"
+  ],
+  "author": {
+    "name": "Melwyn Furtado",
+    "email": "melwynfurtado@gmail.com"
+  },
+  "license": "ISC",
+  "gitHead": "d11ad2bf5ae28bc47e2e14a9149b1049206941ca",
+  "bugs": {
+    "url": "https://github.com/melwynfurtado/postcode-validator/issues"
+  },
+  "homepage": "https://github.com/melwynfurtado/postcode-validator",
+  "_id": "postcode-validator@1.1.0",
+  "_shasum": "36dca251feb41a7cde8534ab27b420846a527cc3",
+  "_from": "postcode-validator@*",
+  "_npmVersion": "2.1.5",
+  "_nodeVersion": "0.10.32",
+  "_npmUser": {
+    "name": "melwynfurtado",
+    "email": "melwynfurtado@gmail.com"
+  },
+  "dist": {
+    "shasum": "36dca251feb41a7cde8534ab27b420846a527cc3",
+    "tarball": "http://registry.npmjs.org/postcode-validator/-/postcode-validator-1.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "melwynfurtado",
+      "email": "melwynfurtado@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/postcode-validator/-/postcode-validator-1.1.0.tgz"
+}
