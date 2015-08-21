@@ -10,7 +10,7 @@ var postcode = require('../lib/index.js');
 // Valid postcodes
 [
   {
-    code: "10014", 
+    code: "10014",
     country: "US"
   },
   {
@@ -37,22 +37,22 @@ var postcode = require('../lib/index.js');
     code: "91180-560",
     country: "INT"
   },
-  { 
+  {
     code: "135",
     country: "INT"
   },
-  { 
+  {
     code: "SW1A 0AA",
     country: "UK"
-  } 
-].forEach(function(item) {
-  assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + "was invalid");
+  }
+].forEach(function (item) {
+  assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid");
 });
 
 // Invalid postcodes
 [
   {
-    code: "!,$^ +@#", 
+    code: "!,$^ +@#",
     country: "INT"
   },
   {
@@ -67,6 +67,6 @@ var postcode = require('../lib/index.js');
     code: "100-0005-9088",
     country: "JP"
   }
-].forEach(function(item) {
+].forEach(function (item) {
   assert.ok(!postcode.validate(item.code, item.country), "Invalid postcode " + item.code + " for country " + item.country + " was invalid");
 });
