@@ -49,6 +49,48 @@ var postcode = require('../lib/index.js');
   assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid");
 });
 
+// Valid postcodes without country
+[
+  {
+    code: "10014"
+  },
+  {
+    code: "W6 8DL"
+  },
+  {
+    code: "M5P 2N7"
+  },
+  {
+    code: "100-0005"
+  },
+  {
+    code: "100020"
+  },
+  {
+    code: "SW1A 0AA"
+  }
+].forEach(function (item) {
+  assert.ok(postcode.validate(item.code), "Valid postcode " + item.code + " was invalid");
+});
+
+// Valid postcodes without country and lenient on
+[
+  {
+  code: "KFPXWT7D",
+  lenient: true
+  },
+  {
+    code: "91180-560",
+    lenient: true
+  },
+  {
+    code: "135",
+    lenient: true
+  }
+].forEach(function (item) {
+  assert.ok(postcode.validate(item.code, null, item.lenient), "Valid postcode " + item.code + " was invalid");
+});
+
 // Invalid postcodes
 [
   {
@@ -68,5 +110,23 @@ var postcode = require('../lib/index.js');
     country: "JP"
   }
 ].forEach(function (item) {
-  assert.ok(!postcode.validate(item.code, item.country), "Invalid postcode " + item.code + " for country " + item.country + " was invalid");
+  assert.ok(!postcode.validate(item.code, item.country), "Invalid postcode " + item.code + " for country " + item.country + " was valid");
+});
+
+// Invalid postcodes without country code
+[
+  {
+    code: "!,$^ +@#"
+  },
+  {
+    code: "1234567asdfafsadf4567"
+  },
+  {
+    code: "M5P@2N7"
+  },
+  {
+    code: "100-0005-9088"
+  }
+].forEach(function (item) {
+  assert.ok(!postcode.validate(item.code), "Invalid postcode " + item.code + " was valid");
 });
