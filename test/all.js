@@ -94,7 +94,9 @@ var postcode = require('../lib/index.js');
     code: "100020",
     country: ["INT", "JP", "UK"]
   }
-].forEach(item => assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid"));
+].forEach(function (item) {
+  assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid");
+});
 
 // Invalid postcode groups
 [
@@ -114,4 +116,6 @@ var postcode = require('../lib/index.js');
     code: "100-0005-9088",
     country: ["JP", "US"]
   }
-].forEach(item => assert.ok(!postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid"));
+].forEach(function (item) {
+  assert.ok(!postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid");
+});
