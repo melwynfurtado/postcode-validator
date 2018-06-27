@@ -70,3 +70,48 @@ var postcode = require('../lib/index.js');
 ].forEach(function (item) {
   assert.ok(!postcode.validate(item.code, item.country), "Invalid postcode " + item.code + " for country " + item.country + " was invalid");
 });
+
+// Postcode groups
+// Tests if it matches at least one of the country codes
+[
+  {
+    code: "10014",
+    country: ["US", "CA"]
+  },
+  {
+    code: "W6 8DL",
+    country: ["UK", "US"]
+  },
+  {
+    code: "M5P 2N7",
+    country: ["CA", "US", "UK"]
+  },
+  {
+    code: "100-0005",
+    country: ["JP", "CA", "US"]
+  },
+  {
+    code: "100020",
+    country: ["INT", "JP", "UK"]
+  }
+].forEach(item => assert.ok(postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid"));
+
+// Invalid postcode groups
+[
+  {
+    code: "!,$^ +@#",
+    country: ["INT", "UK"]
+  },
+  {
+    code: "1234567",
+    country: ["UK", "CA"]
+  },
+  {
+    code: "M5P@2N7",
+    country: ["CA", "US"]
+  },
+  {
+    code: "100-0005-9088",
+    country: ["JP", "US"]
+  }
+].forEach(item => assert.ok(!postcode.validate(item.code, item.country), "Valid postcode " + item.code + " for country " + item.country + " was invalid"));
