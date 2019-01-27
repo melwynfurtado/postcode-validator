@@ -2,6 +2,7 @@
   "name": "postcode-validator",
   "version": "1.2.0",
   "description": "Validate postcodes based on country",
+  "license": "MIT"  
   "repository": {
     "type": "git",
     "url": "git@github.com:melwynfurtado/postcode-validator"
