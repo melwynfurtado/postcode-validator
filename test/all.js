@@ -64,6 +64,10 @@ var postcode = require('../lib/index.js');
     country: "CA"
   },
   {
+    code: "M5K3D8",
+    country: "CA"
+  },
+  {
     code: "100-0005-9088",
     country: "JP"
   }
