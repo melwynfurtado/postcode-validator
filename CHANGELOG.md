@@ -1,4 +1,4 @@
-CHANGELOG
+# CHANGELOG
 
 ## 2.0.0
 * [feature] Stricter country validation and requires node version 8 or above
