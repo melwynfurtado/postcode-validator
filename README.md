@@ -15,7 +15,7 @@ var postcode = require('postcode-validator');
 postcode.validate('W85TT', 'UK'); // returns true
 postcode.validate('1234567', 'UK'); // returns false
 
-country codes: US, UK, CA, JP, INT(International), etc
+country codes: US, UK, CA, JP, INTL(International), etc
 ```
 
 ## Testing
