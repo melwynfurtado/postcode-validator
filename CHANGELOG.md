@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.0.1
+* [fix] Tighten Austrian postal code validation
+
 ## 2.0.0
 * [feature] Stricter country validation
 * [deps] Requires node version 8 or above
