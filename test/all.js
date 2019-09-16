@@ -26,8 +26,6 @@ const postcode = require('../lib/index.js');
   );
 });
 
-console.log("bla");
-
 // Invalid postcodes
 [
   { code: "!,$^ +@#", country: "INTL" },
