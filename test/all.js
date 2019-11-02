@@ -18,7 +18,8 @@ const postcode = require('../lib/index.js');
   { code: "91180-560", country: "INTL" },
   { code: "135", country: "INTL" },
   { code: "SW1A 0AA", country: "UK" },
-  { code: "1010", country: "AT" }
+  { code: "1010", country: "AT" },
+  { code: "D02 TN83", country: "IE" }
 ].forEach(function ({ code, country }) {
   assert.ok(
     postcode.validate(code, country), 
@@ -33,7 +34,8 @@ const postcode = require('../lib/index.js');
   { code: "M5P@2N7", country: "CA" },
   { code: "M5K3D8", country: "CA" },
   { code: "100-0005-9088", country: "JP" },
-  { code: "0234", country: "AT" }
+  { code: "0234", country: "AT" },
+  { code: "DTN83", country: "IE" }
 ].forEach(function ({ code, country }) {
   assert.ok(
     !postcode.validate(code, country), 
