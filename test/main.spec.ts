@@ -19,7 +19,7 @@ describe('postcodeValidator', () => {
 
         expect.assertions(validPostcodes.length);
         validPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeTruthy();
+            expect(postcodeValidator(postcode, country)).toBeTruthy();
         });
     });
 
@@ -36,7 +36,12 @@ describe('postcodeValidator', () => {
         
         expect.assertions(invalidPostcodes.length);
         invalidPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeFalsy();
+            expect(postcodeValidator(postcode, country)).toBeFalsy();
         });
+    });
+
+    test('should throw error for invalid country codes', () => {
+        expect.assertions(1);
+        expect(() => postcodeValidator('SW1A 0AA', 'GB')).toThrow('Invalid country code: GB');
     });
 });
