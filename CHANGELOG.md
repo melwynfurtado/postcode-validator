@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## 2.0.1
+## 2.1.0
+* [feature] Add support for Ireland postcodes
 * [fix] Tighten Austrian postal code validation
 
 ## 2.0.0
