@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.0
+* [feature] Typescript version
+* [deps] Requires node version 10 or above
+
 ## 2.1.0
 * [feature] Add support for Ireland postcodes
 * [fix] Tighten Austrian postal code validation
