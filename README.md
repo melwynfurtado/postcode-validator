@@ -11,9 +11,9 @@ npm install postcode-validator
 ## Usage
 
 ```javascript
-var postcode = require('postcode-validator');
-postcode.validate('W85TT', 'UK'); // returns true
-postcode.validate('1234567', 'UK'); // returns false
+const { postcodeValidator } = require('postcode-validator');
+postcodeValidator('W85TT', 'UK'); // returns true
+postcodeValidator('1234567', 'UK'); // returns false
 
 country codes: US, UK, CA, JP, INTL(International), etc
 ```

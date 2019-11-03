@@ -1,16 +1,28 @@
 {
   "name": "postcode-validator",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Validate postcodes based on country",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:melwynfurtado/postcode-validator"
   },
-  "main": "./lib/index.js",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
   "scripts": {
-    "test": "node test/all"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "postversion" : "git push && git push --tags",
+    "preversion" : "npm run lint",
+    "test": "jest --config jestconfig.json",
+    "version" : "npm run format && git add -A src"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "keywords": [
     "postcode",
     "validation"
@@ -29,5 +41,14 @@
       "name": "Melwyn Furtado",
       "email": "melwynfurtado@gmail.com"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^6.0.0-beta0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4"
+  }
 }
