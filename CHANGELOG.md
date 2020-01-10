@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## next?
+* [feature] Added fu nction to support checking if validation exists for a specified country
+
 ## 3.0.0
 * [feature] Typescript version
 * [deps] Requires node version 10 or above

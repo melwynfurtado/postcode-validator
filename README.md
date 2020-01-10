@@ -15,6 +15,9 @@ const { postcodeValidator } = require('postcode-validator');
 postcodeValidator('W85TT', 'UK'); // returns true
 postcodeValidator('1234567', 'UK'); // returns false
 
+postcodeValidatorExists('UK'); // returns true
+postcodeValidatorExists('Moon'); // returns false
+
 country codes: US, UK, CA, JP, INTL(International), etc
 ```
 

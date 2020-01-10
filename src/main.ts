@@ -11,3 +11,9 @@ export const postcodeValidator = (postcode: string, country: string) => {
 
   return POSTCODE_REGEXES[countryUppercase].test(postcode);
 };
+
+export const postcodeValidatorExists = (country: string) => {
+    const countryUppercase = country.toUpperCase() as CountryCodeStrings;
+
+    return (POSTCODE_REGEXES.hasOwnProperty(countryUppercase))
+};
