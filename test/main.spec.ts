@@ -63,6 +63,18 @@ describe('postcodeValidatorExists', () => {
         });
     });
 
+    test('should return false for non-existing validators', () => {
+        const invalidcountries = [
+            "ABC",
+            "BCD",
+            "CDE"
+        ];
+
+        invalidcountries.forEach((country) => {
+            expect(postcodeValidatorExists(country)).toBeFalsy();
+        });
+    });
+
     test('should throw error for invalid country codes', () => {
         expect.assertions(1);
         expect(() => postcodeValidator('SW1A 0AA', 'GB')).toThrow('Invalid country code: GB');

@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## next?
-* [feature] Added fu nction to support checking if validation exists for a specified country
+* [feature] Added function to support checking if validation exists for a specified country
 
 ## 3.0.0
 * [feature] Typescript version
