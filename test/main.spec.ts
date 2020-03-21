@@ -1,5 +1,5 @@
-import { CountryCodeStrings } from './../src/postcode-types';
-import { postcodeValidator, postcodeValidatorExists } from '../src/main';
+import { CountryCodeStrings } from '../src/postcode-types';
+import { postcodeValidator } from '../src/main';
 
 describe('postcodeValidator', () => {
     test('should return true for valid postcodes', () => {
@@ -19,7 +19,7 @@ describe('postcodeValidator', () => {
 
         expect.assertions(validPostcodes.length);
         validPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country)).toBeTruthy();
+            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeTruthy();
         });
     });
 
@@ -33,50 +33,15 @@ describe('postcodeValidator', () => {
             { postcode: "0234", country: "AT" },
             { postcode: "DTN83", country: "IE" }
         ];
-        
+
         expect.assertions(invalidPostcodes.length);
         invalidPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country)).toBeFalsy();
+            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeFalsy();
         });
     });
 
     test('should throw error for invalid country codes', () => {
         expect.assertions(1);
-        expect(() => postcodeValidator('SW1A 0AA', 'GB')).toThrow('Invalid country code: GB');
-    });
-});
-
-describe('postcodeValidatorExists', () => {
-    test('should return true for existing validators', () => {
-        const validcountries = [
-            "US",
-            "UK",
-            "CA",
-            "JP",
-            "INTL",
-            "AT",
-            "IE"
-        ];
-
-        validcountries.forEach((country) => {
-            expect(postcodeValidatorExists(country)).toBeTruthy();
-        });
-    });
-
-    test('should return false for non-existing validators', () => {
-        const invalidcountries = [
-            "ABC",
-            "BCD",
-            "CDE"
-        ];
-
-        invalidcountries.forEach((country) => {
-            expect(postcodeValidatorExists(country)).toBeFalsy();
-        });
-    });
-
-    test('should throw error for invalid country codes', () => {
-        expect.assertions(1);
-        expect(() => postcodeValidator('SW1A 0AA', 'GB')).toThrow('Invalid country code: GB');
+        expect(() => postcodeValidator('SW1A 0AA', 'GB' as CountryCodeStrings)).toThrow('Invalid country code: GB');
     });
 });
