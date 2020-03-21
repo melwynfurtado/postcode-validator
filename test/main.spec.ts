@@ -1,4 +1,4 @@
-import { CountryCodeStrings } from './../src/postcode-types';
+import { CountryCodeStrings } from '../src/postcode-types';
 import { postcodeValidator } from '../src/main';
 
 describe('postcodeValidator', () => {
