@@ -1,19 +1,12 @@
 import { CountryCodeStrings } from './postcode-types';
 import { POSTCODE_REGEXES } from './postcode-regexes';
 
-export const postcodeValidator = (postcode: string, country: string) => {
-  const countryUppercase = country.toUpperCase() as CountryCodeStrings;
-  
-  if (!POSTCODE_REGEXES.hasOwnProperty(countryUppercase)) {
+export const postcodeValidator = (postcode: string, country: CountryCodeStrings) => {
+
+  if (!POSTCODE_REGEXES.has(country)) {
     // throw Error if country code is unrecognised
     throw new Error(`Invalid country code: ${country}`);
   }
 
-  return POSTCODE_REGEXES[countryUppercase].test(postcode);
-};
-
-export const postcodeValidatorExists = (country: string) => {
-    const countryUppercase = country.toUpperCase() as CountryCodeStrings;
-
-    return (POSTCODE_REGEXES.hasOwnProperty(countryUppercase))
+  return POSTCODE_REGEXES.get(country)?.test(postcode);
 };
