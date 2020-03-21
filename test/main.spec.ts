@@ -1,4 +1,4 @@
-import { CountryCodeStrings } from './../src/postcode-types';
+import { CountryCodeStrings } from '../src/postcode-types';
 import { postcodeValidator } from '../src/main';
 
 describe('postcodeValidator', () => {
@@ -19,7 +19,7 @@ describe('postcodeValidator', () => {
 
         expect.assertions(validPostcodes.length);
         validPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country)).toBeTruthy();
+            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeTruthy();
         });
     });
 
@@ -33,15 +33,15 @@ describe('postcodeValidator', () => {
             { postcode: "0234", country: "AT" },
             { postcode: "DTN83", country: "IE" }
         ];
-        
+
         expect.assertions(invalidPostcodes.length);
         invalidPostcodes.forEach(({ postcode, country }) => {
-            expect(postcodeValidator(postcode, country)).toBeFalsy();
+            expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeFalsy();
         });
     });
 
     test('should throw error for invalid country codes', () => {
         expect.assertions(1);
-        expect(() => postcodeValidator('SW1A 0AA', 'GB')).toThrow('Invalid country code: GB');
+        expect(() => postcodeValidator('SW1A 0AA', 'GB' as CountryCodeStrings)).toThrow('Invalid country code: GB');
     });
 });
