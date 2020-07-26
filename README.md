@@ -12,15 +12,15 @@ npm install postcode-validator
 
 ```javascript
 // commonjs
-const { postcodeValidator, postcodeValidatorExists } = require('postcode-validator');
+const { postcodeValidator, postcodeValidatorExistsForCountry } = require('postcode-validator');
 // ES6
-import { postcodeValidator, postcodeValidatorExists } from 'postcode-validator';
+import { postcodeValidator, postcodeValidatorExistsForCountry } from 'postcode-validator';
 
 postcodeValidator('W85TT', 'UK'); // returns true
 postcodeValidator('1234567', 'UK'); // returns false
 
-postcodeValidatorExists('UK'); // returns true
-postcodeValidatorExists('Moon'); // returns false
+postcodeValidatorExistsForCountry('UK'); // returns true
+postcodeValidatorExistsForCountry('Moon'); // returns false
 
 country codes: US, UK, CA, JP, INTL(International), etc
 ```
