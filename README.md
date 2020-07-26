@@ -16,13 +16,13 @@ const { postcodeValidator, postcodeValidatorExistsForCountry } = require('postco
 // ES6
 import { postcodeValidator, postcodeValidatorExistsForCountry } from 'postcode-validator';
 
-postcodeValidator('W85TT', 'UK'); // returns true
-postcodeValidator('1234567', 'UK'); // returns false
+postcodeValidator('W85TT', 'GB'); // returns true
+postcodeValidator('1234567', 'GB'); // returns false
 
-postcodeValidatorExistsForCountry('UK'); // returns true
+postcodeValidatorExistsForCountry('GB'); // returns true
 postcodeValidatorExistsForCountry('Moon'); // returns false
 
-country codes: US, UK, CA, JP, INTL(International), etc
+country codes: US, GB, CA, JP, INTL(International), etc
 ```
 
 ## Testing

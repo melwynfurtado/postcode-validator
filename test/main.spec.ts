@@ -1,18 +1,18 @@
 import { CountryCodeStrings } from '../src/postcode-types';
-import { postcodeValidator } from '../src/main';
+import { postcodeValidator, postcodeValidatorExistsForCountry } from '../src/main';
 
 describe('postcodeValidator', () => {
     test('should return true for valid postcodes', () => {
         const validPostcodes = [
             { postcode: "10014", country: "US" },
-            { postcode: "W6 8DL", country: "UK" },
+            { postcode: "W6 8DL", country: "GB" },
             { postcode: "M5P 2N7", country: "CA" },
             { postcode: "100-0005", country: "JP" },
             { postcode: "100020", country: "INTL" },
             { postcode: "KFPXWT7D", country: "INTL" },
             { postcode: "91180-560", country: "INTL" },
             { postcode: "135", country: "INTL" },
-            { postcode: "SW1A 0AA", country: "UK" },
+            { postcode: "SW1A 0AA", country: "GB" },
             { postcode: "1010", country: "AT" },
             { postcode: "D02 TN83", country: "IE" }
         ];
@@ -26,7 +26,7 @@ describe('postcodeValidator', () => {
     test('should return false for invalid postcodes', () => {
         const invalidPostcodes = [
             { postcode: "!,$^ +@#", country: "INTL" },
-            { postcode: "1234567", country: "UK" },
+            { postcode: "1234567", country: "GB" },
             { postcode: "M5P@2N7", country: "CA" },
             { postcode: "M5K3D8", country: "CA" },
             { postcode: "100-0005-9088", country: "JP" },
@@ -42,6 +42,22 @@ describe('postcodeValidator', () => {
 
     test('should throw error for invalid country codes', () => {
         expect.assertions(1);
-        expect(() => postcodeValidator('SW1A 0AA', 'GB' as CountryCodeStrings)).toThrow('Invalid country code: GB');
+        expect(() => postcodeValidator('SW1A 0AA', 'MOON' as CountryCodeStrings)).toThrow('Invalid country code: MOON');
+    });
+});
+
+describe('postcodeValidatorExistsForCountry', () => {
+    test('should return true for valid country code', () => {
+        expect.assertions(3);
+        expect(postcodeValidatorExistsForCountry('PR')).toBeTruthy();
+        expect(postcodeValidatorExistsForCountry('AU')).toBeTruthy();
+        expect(postcodeValidatorExistsForCountry('DE')).toBeTruthy();
+    });
+
+    test('should return false for invalid country code', () => {
+        expect.assertions(3);
+        expect(postcodeValidatorExistsForCountry('PO' as CountryCodeStrings)).toBeFalsy();
+        expect(postcodeValidatorExistsForCountry('SUN' as CountryCodeStrings)).toBeFalsy();
+        expect(postcodeValidatorExistsForCountry('STAR' as CountryCodeStrings)).toBeFalsy();
     });
 });

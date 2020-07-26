@@ -1,5 +1,6 @@
 export enum CountryCode {
   UK = 'UK',
+  GB = 'GB',
   JE = 'JE',
   GG = 'GG',
   IM = 'IM',
