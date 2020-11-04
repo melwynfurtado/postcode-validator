@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Unrelased
+* Fix validation for Korean zip codes
+
 ## 3.1.0
 * [feature] Added support for typed country code
 * [feature] Added function to support checking if validation exists for a specified country
