@@ -1,7 +1,9 @@
 import { CountryCode, CountryCodeStrings } from './postcode-types';
 
+  // TODO: Remove CountryCode.UK in next major version release
 export const POSTCODE_REGEXES: Map<CountryCodeStrings, RegExp> = new Map([
   [CountryCode.UK, /^([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-z][A-z]){1}$/i],
+  [CountryCode.GB, /^([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-z][A-z]){1}$/i],
   [CountryCode.JE, /^JE\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}$/],
   [CountryCode.GG, /^GY\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}$/],
   [CountryCode.IM, /^IM\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}$/],
@@ -25,7 +27,7 @@ export const POSTCODE_REGEXES: Map<CountryCodeStrings, RegExp> = new Map([
   [CountryCode.PT, /^\d{4}([\-]\d{3})?$/],
   [CountryCode.FI, /^\d{5}$/],
   [CountryCode.AX, /^22\d{3}$/],
-  [CountryCode.KR, /^\d{3}[\-]\d{3}$/],
+  [CountryCode.KR, /^\d{5}$/],
   [CountryCode.CN, /^\d{6}$/],
   [CountryCode.TW, /^\d{3}(\d{2})?$/],
   [CountryCode.SG, /^\d{6}$/],

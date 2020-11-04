@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.1.1
+* [fix] Replace UK country code with GB
+* [fix] Fix validation for Korean zipcode
+
 ## 3.1.0
 * [feature] Added support for typed country code
 * [feature] Added function to support checking if validation exists for a specified country
