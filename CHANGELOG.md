@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## Unrelased
-* Fix validation for Korean zip codes
+## 3.2.0
+* [fix] Replace UK country code with GB
+* [fix] Fix validation for Korean zipcode
 
 ## 3.1.0
 * [feature] Added support for typed country code
