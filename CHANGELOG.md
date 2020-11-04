@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 3.2.0
+## 3.1.1
 * [fix] Replace UK country code with GB
 * [fix] Fix validation for Korean zipcode
 
