@@ -14,3 +14,5 @@ export const postcodeValidator = (postcode: string, country: CountryCodeStrings)
 export const postcodeValidatorExistsForCountry = (country: CountryCodeStrings): boolean => {
   return POSTCODE_REGEXES.has(country);
 };
+
+//Feature Request: Add a method to validate a postal code against ANY country regex
