@@ -1,4 +1,3 @@
-import { CountryCodeStrings } from '../src/postcode-types';
 import { postcodeValidator, postcodeValidatorExistsForCountry } from '../src/main';
 
 describe('postcodeValidator', () => {
@@ -19,7 +18,7 @@ describe('postcodeValidator', () => {
 
     expect.assertions(validPostcodes.length);
     validPostcodes.forEach(({ postcode, country }) => {
-      expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeTruthy();
+      expect(postcodeValidator(postcode, country)).toBeTruthy();
     });
   });
 
@@ -36,13 +35,13 @@ describe('postcodeValidator', () => {
 
     expect.assertions(invalidPostcodes.length);
     invalidPostcodes.forEach(({ postcode, country }) => {
-      expect(postcodeValidator(postcode, country as CountryCodeStrings)).toBeFalsy();
+      expect(postcodeValidator(postcode, country)).toBeFalsy();
     });
   });
 
   test('should throw error for invalid country codes', () => {
     expect.assertions(1);
-    expect(() => postcodeValidator('SW1A 0AA', 'MOON' as CountryCodeStrings)).toThrow('Invalid country code: MOON');
+    expect(() => postcodeValidator('SW1A 0AA', 'MOON')).toThrow('Invalid country code: MOON');
   });
 });
 
@@ -56,8 +55,8 @@ describe('postcodeValidatorExistsForCountry', () => {
 
   test('should return false for invalid country code', () => {
     expect.assertions(3);
-    expect(postcodeValidatorExistsForCountry('PO' as CountryCodeStrings)).toBeFalsy();
-    expect(postcodeValidatorExistsForCountry('SUN' as CountryCodeStrings)).toBeFalsy();
-    expect(postcodeValidatorExistsForCountry('STAR' as CountryCodeStrings)).toBeFalsy();
+    expect(postcodeValidatorExistsForCountry('PO')).toBeFalsy();
+    expect(postcodeValidatorExistsForCountry('SUN')).toBeFalsy();
+    expect(postcodeValidatorExistsForCountry('STAR')).toBeFalsy();
   });
 });
