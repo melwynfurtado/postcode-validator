@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.2.0
+* [feature] Export country codes as type for typescript
+* [fix] Validate postal code for ANY country
+* [fix] Update dev dependencies to overcome security vulnerabilities
+
 ## 3.1.1
 * [fix] Replace UK country code with GB
 * [fix] Fix validation for Korean zipcode
