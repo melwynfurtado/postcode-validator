@@ -161,5 +161,3 @@ export enum CountryCode {
   YT = 'YT',
   INTL = 'INTL',
 }
-
-export type CountryCodeStrings = keyof typeof CountryCode;
