@@ -126,7 +126,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.AS, /^96799$/],
   [CountryCode.CC, /^6799$/],
   [CountryCode.CK, /^\d{4}$/],
-  [CountryCode.RS, /^\d{6}$/],
+  [CountryCode.RS, /^\d{5,6}$/],
   [CountryCode.ME, /^8\d{4}$/],
   [CountryCode.CS, /^\d{5}$/],
   [CountryCode.YU, /^\d{5}$/],
