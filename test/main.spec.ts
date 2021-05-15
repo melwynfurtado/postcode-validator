@@ -14,6 +14,9 @@ describe('postcodeValidator', () => {
       { postcode: 'SW1A 0AA', country: 'GB' },
       { postcode: '1010', country: 'AT' },
       { postcode: 'D02 TN83', country: 'IE' },
+      { postcode: 'FI-00121', country: 'FI' },
+      { postcode: '9103401', country: 'IL' },
+      { postcode: '60198', country: 'IL' }
     ];
 
     expect.assertions(validPostcodes.length);
@@ -25,12 +28,14 @@ describe('postcodeValidator', () => {
   test('should return false for invalid postcodes', () => {
     const invalidPostcodes = [
       { postcode: '!,$^ +@#', country: 'INTL' },
+      { postcode: '123456', country: 'US' },
+      { postcode: '12345 6789', country: 'US' },
       { postcode: '1234567', country: 'GB' },
       { postcode: 'M5P@2N7', country: 'CA' },
       { postcode: 'M5K3D8', country: 'CA' },
       { postcode: '100-0005-9088', country: 'JP' },
       { postcode: '0234', country: 'AT' },
-      { postcode: 'DTN83', country: 'IE' },
+      { postcode: 'DTN83', country: 'IE' }
     ];
 
     expect.assertions(invalidPostcodes.length);
