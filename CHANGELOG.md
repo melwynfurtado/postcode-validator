@@ -1,8 +1,11 @@
 # CHANGELOG
 
+## 3.3.0
+* [feature] EcmaScript modules support.
+
 ## 3.2.1
 * [fix] Fix postocde validation regex for US, MU, IL & countried in EU which require country code to be prefixed.
- 
+
 ## 3.2.0
 * [feature] Export country codes as type for typescript
 * [fix] Validate postal code for ANY country

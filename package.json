@@ -1,16 +1,16 @@
 {
   "name": "postcode-validator",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "Validate postcodes based on country",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:melwynfurtado/postcode-validator"
   },
-  "main": "lib/main.js",
-  "types": "lib/main.d.ts",
+  "main": "./lib/cjs/main.js",
+  "module": "./lib/esm/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -21,7 +21,7 @@
     "version": "npm run format && git add -A src"
   },
   "files": [
-    "lib/**/*"
+    "lib/"
   ],
   "keywords": [
     "postcode",
