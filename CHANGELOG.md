@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 3.2.1
+* [fix] Fix postocde validation regex for US, MU, IL & countried in EU which require country code to be prefixed.
+ 
 ## 3.2.0
 * [feature] Export country codes as type for typescript
 * [fix] Validate postal code for ANY country
@@ -7,7 +10,7 @@
 
 ## 3.1.1
 * [fix] Replace UK country code with GB
-* [fix] Fix validation for Korean zipcode
+* [fix] Fix validation for Korean postcode
 
 ## 3.1.0
 * [feature] Added support for typed country code
