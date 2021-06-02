@@ -54,7 +54,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.KH, /^\d{5}$/],
   [CountryCode.CV, /^\d{4}$/],
   [CountryCode.CL, /^\d{7}$/],
-  [CountryCode.CR, /^\d{4,5}|\d{3}-\d{4}$/],
+  [CountryCode.CR, /^(\d{4,5}|\d{3}-\d{4})$/],
   [CountryCode.HR, /^(HR-)?\d{5}$/],
   [CountryCode.CY, /^\d{4}$/],
   [CountryCode.CZ, /^\d{3}[ ]?\d{2}$/],
