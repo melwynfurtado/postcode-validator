@@ -42,8 +42,21 @@
       "email": "melwynfurtado@gmail.com"
     }
   ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },  
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/jest": "^26.0.20",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.3",
