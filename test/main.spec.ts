@@ -16,7 +16,8 @@ describe('postcodeValidator', () => {
       { postcode: 'D02 TN83', country: 'IE' },
       { postcode: 'FI-00121', country: 'FI' },
       { postcode: '9103401', country: 'IL' },
-      { postcode: '60198', country: 'IL' }
+      { postcode: '60198', country: 'IL' },
+      { postcode: '41008', country: 'ES' }
     ];
 
     expect.assertions(validPostcodes.length);
@@ -35,7 +36,9 @@ describe('postcodeValidator', () => {
       { postcode: 'M5K3D8', country: 'CA' },
       { postcode: '100-0005-9088', country: 'JP' },
       { postcode: '0234', country: 'AT' },
-      { postcode: 'DTN83', country: 'IE' }
+      { postcode: 'DTN83', country: 'IE' },
+      { postcode: '53000', country: 'ES' },
+      { postcode: '00999', country: 'ES' }
     ];
 
     expect.assertions(invalidPostcodes.length);
