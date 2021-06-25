@@ -18,7 +18,8 @@
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "test": "jest --config jestconfig.json",
-    "version": "npm run format && git add -A src"
+    "version": "npm run format && git add -A src",
+    "release": "standard-version"
   },
   "files": [
     "lib/"
