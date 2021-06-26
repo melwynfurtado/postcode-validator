@@ -14,7 +14,7 @@
     "commit": "git-cz",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "prepublishOnly": "npm test && npm run lint",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
@@ -51,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npm commit --hook || true"
+      "prepare-commit-msg": "exec < /dev/tty && npm run commit --hook || true"
     }
   },
   "devDependencies": {
