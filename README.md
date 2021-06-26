@@ -35,3 +35,10 @@ Run the unit tests with:
 ```javascript
 npm test
 ```
+
+## Conventional Commits
+
+Commit code using below npm script or just follow conventional commits for commit messages using git commit.
+```javascript
+npm run commit
+```
