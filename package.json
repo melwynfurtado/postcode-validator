@@ -1,6 +1,6 @@
 {
   "name": "postcode-validator",
-  "version": "0.0.0-development",
+  "version": "3.4.0",
   "description": "Validate postcodes based on country",
   "license": "MIT",
   "repository": {
@@ -15,11 +15,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build && husky install",
-    "prepublishOnly": "npm test && npm run lint",
-    "postversion": "git push && git push --tags",
-    "preversion": "npm run lint",
     "test": "jest --config jestconfig.json",
-    "version": "npm run format && git add -A src",
     "semantic-release": "semantic-release"
   },
   "files": [
