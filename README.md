@@ -1,3 +1,7 @@
+# postcode-validator
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 Node.js module for parsing and validating postcodes. Country specific validation is supported for most countries including GB, US, Canada, Japan and many others.
 
 **Note:** I haven't tested all combinations of postcodes for the extended country regular expressions. Please raise a PR with necessary test coverage for as many countries possible.
@@ -30,4 +34,11 @@ country codes: US, GB, CA, JP, INTL(International), etc
 Run the unit tests with:
 ```javascript
 npm test
+```
+
+## Conventional Commits
+
+Commit code using below npm script or just follow conventional commits for commit messages using git commit.
+```javascript
+npm run commit
 ```

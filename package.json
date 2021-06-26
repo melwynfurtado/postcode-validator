@@ -1,25 +1,26 @@
 {
   "name": "postcode-validator",
-  "version": "3.3.1",
+  "version": "0.0.0-development",
   "description": "Validate postcodes based on country",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:melwynfurtado/postcode-validator"
+    "url": "https://github.com/melwynfurtado/postcode-validator.git"
   },
   "main": "./lib/cjs/main.js",
   "module": "./lib/esm/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "commit": "git-cz",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "prepublishOnly": "npm test && npm run lint",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "test": "jest --config jestconfig.json",
     "version": "npm run format && git add -A src",
-    "release": "standard-version"
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib/"
@@ -48,18 +49,16 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@types/jest": "^26.0.20",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "semantic-release": "^17.4.4",
     "ts-jest": "^26.5.3",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
