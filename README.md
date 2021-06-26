@@ -1,3 +1,7 @@
+# postcode-validator
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 Node.js module for parsing and validating postcodes. Country specific validation is supported for most countries including GB, US, Canada, Japan and many others.
 
 **Note:** I haven't tested all combinations of postcodes for the extended country regular expressions. Please raise a PR with necessary test coverage for as many countries possible.
