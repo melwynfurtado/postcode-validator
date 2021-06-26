@@ -11,7 +11,7 @@
   "module": "./lib/esm/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "commit": "git-cz",
+    "cm": "git-cz",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build && husky install",
@@ -47,11 +47,6 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npm run commit --hook || true"
     }
   },
   "devDependencies": {
