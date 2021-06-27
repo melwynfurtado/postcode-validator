@@ -1,5 +1,11 @@
 # Contributing
 
+## Install Dependencies
+
+```javascript
+npm install
+```
+
 ## Making a PR
 
 1. You've added or updated tests for this change.
