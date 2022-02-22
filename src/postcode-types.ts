@@ -145,6 +145,7 @@ export enum CountryCode {
   NC = 'NC',
   NE = 'NE',
   VI = 'VI',
+  VN = 'VN',
   PF = 'PF',
   PG = 'PG',
   PM = 'PM',
