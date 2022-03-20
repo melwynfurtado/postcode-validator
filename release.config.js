@@ -129,7 +129,7 @@ const releaseRules = [
         {
           assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
           message:
-            'release(version): Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+            'ci: Release ${nextRelease.version} [skip ci]',
         },
       ],
       '@semantic-release/github',
