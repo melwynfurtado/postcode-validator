@@ -14,19 +14,29 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Create release branch
+        run: |
+          git checkout -b release-candidate
+
       - name: Setup Node.js 16
         uses: actions/setup-node@v2
         with:
           node-version: 16
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
+
       - name: Lint
         run: npm run lint
+
       - name: Test
         run: npm test
+
       - name: Build
         run: npm run build
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

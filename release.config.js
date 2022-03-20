@@ -103,7 +103,7 @@ const releaseRules = [
   
   module.exports = {
     releaseRules,
-    branches: ['master'],
+    branches: ['master', 'release-candidate'],
     parserOpts: {
       mergePattern: /^Merge pull request #(\d+) from (.*)$/,
       mergeCorrespondence: ['id', 'source'],
