@@ -117,12 +117,13 @@ const releaseRules = [
         },
       ],
       '@semantic-release/release-notes-generator',
-      [
-        '@semantic-release/exec',
-        {
-          prepareCmd: 'node ./scripts/prepare.js ${nextRelease.version}',
-        },
-      ],
+      '@semantic-release/npm',
+      // [
+      //   '@semantic-release/exec',
+      //   {
+      //     prepareCmd: 'node ./scripts/prepare.js ${nextRelease.version}',
+      //   },
+      // ],
       [
         '@semantic-release/git',
         {
