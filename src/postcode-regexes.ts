@@ -154,6 +154,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.NC, /^988\d{2}$/],
   [CountryCode.NE, /^\d{4}$/],
   [CountryCode.VI, /^008(([0-4]\d)|(5[01]))([ \-]\d{4})?$/],
+  [CountryCode.VN, /^\d{6}$/],
   [CountryCode.PF, /^987\d{2}$/],
   [CountryCode.PG, /^\d{3}$/],
   [CountryCode.PM, /^9[78]5\d{2}$/],
