@@ -15,10 +15,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Create release branch
-        run: |
-          git checkout -b release-candidate
-
       - name: Setup Node.js 16
         uses: actions/setup-node@v2
         with:
