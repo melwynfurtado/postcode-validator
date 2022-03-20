@@ -1,3 +1,16 @@
+## [3.6.1](https://github.com/melwynfurtado/postcode-validator/compare/v3.6.0...v3.6.1) (2022-03-20)
+
+
+### Continuous Integration
+
+* create release branch ([7724238](https://github.com/melwynfurtado/postcode-validator/commit/77242387b0c2c3ec07df645d5d03208b53b5538f))
+* update deps and add release notes ([4158afd](https://github.com/melwynfurtado/postcode-validator/commit/4158afd80933e6e75e065801c8768a89b7048ee5))
+* update deps and add release notes ([f6dfaef](https://github.com/melwynfurtado/postcode-validator/commit/f6dfaef6b69051c48120edc397729ecfe1939172))
+* update release commit msg ([3e398ef](https://github.com/melwynfurtado/postcode-validator/commit/3e398efdc603ff7a5f863363d77c6117d8fd61dd))
+* update release commit msg ([c9db2ed](https://github.com/melwynfurtado/postcode-validator/commit/c9db2ed2d3473a63ae04410eee3b21ed16d40f2a))
+* update semantic release token ([6291672](https://github.com/melwynfurtado/postcode-validator/commit/6291672a247befcefde280af8d560985fded733e))
+* use node16 ([2ba8249](https://github.com/melwynfurtado/postcode-validator/commit/2ba8249ed5ae7d2371f532c520eced4896652f96))
+
 # CHANGELOG
 
 ## 3.3.0
