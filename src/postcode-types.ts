@@ -89,6 +89,7 @@ export enum CountryCode {
   NI = 'NI',
   NG = 'NG',
   OM = 'OM',
+  PA = 'PA',
   PK = 'PK',
   PY = 'PY',
   PH = 'PH',
