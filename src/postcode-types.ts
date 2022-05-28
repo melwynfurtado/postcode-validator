@@ -24,6 +24,7 @@ export enum CountryCode {
   PT = 'PT',
   FI = 'FI',
   AX = 'AX',
+  AE = 'AE',
   KR = 'KR',
   CN = 'CN',
   TW = 'TW',

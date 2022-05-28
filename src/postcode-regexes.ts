@@ -22,6 +22,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.AU, /^\d{4}$/],
   [CountryCode.IT, /^\d{5}$/],
   [CountryCode.CH, /^\d{4}$/],
+  [CountryCode.AE, /^.*$/],
   [CountryCode.AT, /^(?!0)\d{4}$/],
   [CountryCode.ES, /^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/],
   [CountryCode.NL, /^\d{4}[ ]?[A-Z]{2}$/],
