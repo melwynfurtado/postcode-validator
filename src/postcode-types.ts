@@ -133,6 +133,7 @@ export enum CountryCode {
   GS = 'GS',
   GU = 'GU',
   GW = 'GW',
+  HK = 'HK',
   HM = 'HM',
   IQ = 'IQ',
   KG = 'KG',

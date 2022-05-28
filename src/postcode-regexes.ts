@@ -67,6 +67,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.GR, /^\d{3}[ ]?\d{2}$/],
   [CountryCode.GL, /^39\d{2}$/],
   [CountryCode.GT, /^\d{5}$/],
+  [CountryCode.HK, /^.*$/],
   [CountryCode.HT, /^\d{4}$/],
   [CountryCode.HN, /^(?:\d{5})?$/],
   [CountryCode.HU, /^\d{4}$/],
