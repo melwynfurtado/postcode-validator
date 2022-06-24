@@ -11,6 +11,8 @@ export enum CountryCode {
   JP = 'JP',
   FR = 'FR',
   AU = 'AU',
+  AL = 'AL',
+  GI = 'GI',
   IT = 'IT',
   CH = 'CH',
   AT = 'AT',
