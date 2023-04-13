@@ -69,6 +69,7 @@ export enum CountryCode {
   KZ = 'KZ',
   KE = 'KE',
   KW = 'KW',
+  KY = 'KY',
   LA = 'LA',
   LV = 'LV',
   LB = 'LB',

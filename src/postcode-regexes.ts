@@ -78,6 +78,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.KZ, /^\d{6}$/],
   [CountryCode.KE, /^\d{5}$/],
   [CountryCode.KW, /^\d{5}$/],
+  [CountryCode.KY, /^KY[123]-\d{4}$/],
   [CountryCode.LA, /^\d{5}$/],
   [CountryCode.LV, /^(LV-)?\d{4}$/],
   [CountryCode.LB, /^(\d{4}([ ]?\d{4})?)?$/],

@@ -17,7 +17,8 @@ describe('postcodeValidator', () => {
       { postcode: 'FI-00121', country: 'FI' },
       { postcode: '9103401', country: 'IL' },
       { postcode: '60198', country: 'IL' },
-      { postcode: '41008', country: 'ES' }
+      { postcode: '41008', country: 'ES' },
+      { postcode: 'KY3-0001', country: 'KY' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -38,7 +39,8 @@ describe('postcodeValidator', () => {
       { postcode: '0234', country: 'AT' },
       { postcode: 'DTN83', country: 'IE' },
       { postcode: '53000', country: 'ES' },
-      { postcode: '00999', country: 'ES' }
+      { postcode: '00999', country: 'ES' },
+      { postcode: 'KY4-0000', country: 'KY' },
     ];
 
     expect.assertions(invalidPostcodes.length);
@@ -55,10 +57,11 @@ describe('postcodeValidator', () => {
 
 describe('postcodeValidatorExistsForCountry', () => {
   test('should return true for valid country code', () => {
-    expect.assertions(3);
+    expect.assertions(4);
     expect(postcodeValidatorExistsForCountry('PR')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('AU')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('DE')).toBeTruthy();
+    expect(postcodeValidatorExistsForCountry('KY')).toBeTruthy();
   });
 
   test('should return false for invalid country code', () => {
