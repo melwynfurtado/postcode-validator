@@ -162,5 +162,6 @@ export enum CountryCode {
   WF = 'WF',
   XK = 'XK',
   YT = 'YT',
+  PE = 'PE',
   INTL = 'INTL',
 }
