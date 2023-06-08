@@ -1,6 +1,6 @@
 {
   "name": "postcode-validator",
-  "version": "3.8.5",
+  "version": "3.8.6",
   "description": "Validate postcodes based on country",
   "license": "MIT",
   "repository": {
