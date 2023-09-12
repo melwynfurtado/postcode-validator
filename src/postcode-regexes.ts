@@ -34,7 +34,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.AX, /^22\d{3}$/],
   [CountryCode.KR, /^\d{5}$/],
   [CountryCode.CN, /^\d{6}$/],
-  [CountryCode.TW, /^\d{3}(\d{2})?$/],
+  [CountryCode.TW, /^\d{3}(\d{2,3})?$/],
   [CountryCode.SG, /^\d{6}$/],
   [CountryCode.DZ, /^\d{5}$/],
   [CountryCode.AD, /^AD\d{3}$/],
