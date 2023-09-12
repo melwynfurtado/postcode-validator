@@ -20,6 +20,8 @@ describe('postcodeValidator', () => {
       { postcode: '41008', country: 'ES' },
       { postcode: 'KY3-0001', country: 'KY' },
       { postcode: '01000', country: 'PE' },
+      { postcode: '12345', country: 'TW' },
+      { postcode: '123456', country: 'TW' },
     ];
 
     expect.assertions(validPostcodes.length);
