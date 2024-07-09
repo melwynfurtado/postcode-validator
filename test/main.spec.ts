@@ -22,6 +22,7 @@ describe('postcodeValidator', () => {
       { postcode: '01000', country: 'PE' },
       { postcode: '12345', country: 'TW' },
       { postcode: '123456', country: 'TW' },
+      { postcode: '12341-12213', country: 'IR' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -47,6 +48,7 @@ describe('postcodeValidator', () => {
       { postcode: '0100', country: 'PE' },
       { postcode: '010000', country: 'PE' },
       { postcode: '0A000', country: 'PE' },
+      { postcode: '1121234', country: 'IR' },
     ];
 
     expect.assertions(invalidPostcodes.length);
@@ -63,12 +65,13 @@ describe('postcodeValidator', () => {
 
 describe('postcodeValidatorExistsForCountry', () => {
   test('should return true for valid country code', () => {
-    expect.assertions(5);
+    expect.assertions(6);
     expect(postcodeValidatorExistsForCountry('PR')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('AU')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('DE')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('KY')).toBeTruthy();
     expect(postcodeValidatorExistsForCountry('PE')).toBeTruthy();
+    expect(postcodeValidatorExistsForCountry('IR')).toBeTruthy();
   });
 
   test('should return false for invalid country code', () => {
