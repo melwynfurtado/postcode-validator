@@ -150,7 +150,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.LS, /^\d{3}$/],
   [CountryCode.MG, /^\d{3}$/],
   [CountryCode.MH, /^969[67]\d([ \-]\d{4})?$/],
-  [CountryCode.MN, /^\d{6}$/],
+  [CountryCode.MN, /^\d{5}$/],
   [CountryCode.MP, /^9695[012]([ \-]\d{4})?$/],
   [CountryCode.MQ, /^9[78]2\d{2}$/],
   [CountryCode.NC, /^988\d{2}$/],
