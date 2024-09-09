@@ -186,4 +186,5 @@ export enum CountryCode {
   CO = "CO",
   IR = "IR",
   INTL = 'INTL',
+  CO = 'CO'
 }
