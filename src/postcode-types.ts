@@ -183,7 +183,6 @@ export enum CountryCode {
   MF = "MF",
   MM = "MM",
   SV = "SV",
-  CO = "CO",
   IR = "IR",
   INTL = 'INTL',
   CO = 'CO'
