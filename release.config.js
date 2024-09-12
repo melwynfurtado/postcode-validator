@@ -1,5 +1,4 @@
 // Based on https://github.com/oleg-koval/semantic-release-npm-github-publish
-
 const releaseRules = [
     {
       type: 'build',
