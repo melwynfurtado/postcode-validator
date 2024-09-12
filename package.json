@@ -48,11 +48,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^10.1.5",
-    "@semantic-release/npm": "^10.0.4",
-    "@semantic-release/release-notes-generator": "^14.0.1",
     "@types/jest": "^27.4.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.0.1",
