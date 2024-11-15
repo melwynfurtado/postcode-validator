@@ -191,6 +191,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.MF, /^9[78][01]\d{2}/],
   [CountryCode.MM, /^\d{5}/],
   [CountryCode.SV, /^CP [1-3][1-7][0-2]\d/],
+  [CountryCode.AE, /^(?:(?:P\.?O\.?|P[Oo]stal)\s*(?:Box)\s*\d{4}|\d{3,5})$/],
   [CountryCode.IR, /^\d{5}-?\d{5}/],
   [CountryCode.PE, /^[0-2]\d{4}$/],
   [CountryCode.INTL, /^(?:[A-Z0-9]+([- ]?[A-Z0-9]+)*)?$/i],
