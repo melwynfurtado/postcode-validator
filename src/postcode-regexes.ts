@@ -39,7 +39,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.SG, /^\d{6}$/],
   [CountryCode.DZ, /^\d{5}$/],
   [CountryCode.AD, /^AD\d{3}$/],
-  [CountryCode.AR, /^([A-HJ-NP-Z])?\d{4}([A-Z]{3})?$/],
+  [CountryCode.AR, /^[A-HJ-NP-Z]\d{4}([A-Z]{3})?$/],
   [CountryCode.AM, /^(37)?\d{4}$/],
   [CountryCode.AZ, /^\d{4}$/],
   [CountryCode.BH, /^((1[0-2]|[2-9])\d{2})?$/],
