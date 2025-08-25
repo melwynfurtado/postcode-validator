@@ -1,16 +1,20 @@
 import { POSTCODE_REGEXES } from './postcode-regexes';
 
-export { CountryCode } from './postcode-types';
+import { CountryCode } from './postcode-types';
 
-export const postcodeValidator = (postcode: string, country: string): boolean => {
-  if (!POSTCODE_REGEXES.has(country)) {
+export type OtherStringOr<T extends string> = T | (string & {});
+
+export const postcodeValidator = (postcode: string, country: OtherStringOr<CountryCode>): boolean => {
+  const regex = POSTCODE_REGEXES.get(country);
+  if (!regex) {
     // throw Error if country code is unrecognised
     throw Error(`Invalid country code: ${country}`);
   }
 
-  return POSTCODE_REGEXES.get(country)!.test(postcode);
+  return regex.test(postcode);
 };
 
-export const postcodeValidatorExistsForCountry = (country: string): boolean => {
+export const postcodeValidatorExistsForCountry = (country: OtherStringOr<CountryCode>): boolean => {
   return POSTCODE_REGEXES.has(country);
 };
+export { CountryCode };
