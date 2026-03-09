@@ -82,7 +82,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.LA, /^\d{5}$/],
   [CountryCode.LV, /^(LV-)?\d{4}$/],
   [CountryCode.LB, /^(\d{4}([ ]?\d{4})?)?$/],
-  [CountryCode.LI, /^(948[5-9])|(949[0-7])$/],
+  [CountryCode.LI, /^(948[5-9]|949[0-7])$/],
   [CountryCode.LT, /^(LT-)?\d{5}$/],
   [CountryCode.LU, /^(L-)?\d{4}$/],
   [CountryCode.MK, /^\d{4}$/],

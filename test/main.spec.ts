@@ -23,6 +23,7 @@ describe('postcodeValidator', () => {
       { postcode: '12345', country: 'TW' },
       { postcode: '123456', country: 'TW' },
       { postcode: '12341-12213', country: 'IR' },
+      { postcode: '9487', country: 'LI' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -49,6 +50,7 @@ describe('postcodeValidator', () => {
       { postcode: '010000', country: 'PE' },
       { postcode: '0A000', country: 'PE' },
       { postcode: '1121234', country: 'IR' },
+      { postcode: '9485aaaa', country: 'LI' },
     ];
 
     expect.assertions(invalidPostcodes.length);
