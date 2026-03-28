@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/melwynfurtado/postcode-validator.git"
   },
+  "engines": {
+    "node": ">=20.8.1"
+  },
   "main": "./lib/cjs/main.js",
   "module": "./lib/esm/main.js",
   "scripts": {
@@ -48,7 +51,11 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
     "commitizen": "^4.2.4",
@@ -56,7 +63,7 @@
     "husky": "^9.0.11",
     "jest": "^30.3.0",
     "prettier": "^3.0.3",
-    "semantic-release": "^23.1.1",
+    "semantic-release": "^25.0.3",
     "ts-jest": "^29.3.4",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",

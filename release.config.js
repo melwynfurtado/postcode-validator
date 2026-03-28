@@ -51,35 +51,31 @@ const releaseRules = [
   const customTransform = (commit, context) => {
     const issues = [];
   
-    commit.notes.forEach((note) => {
-      note.title = `BREAKING CHANGES`;
-    });
+    const notes = commit.notes.map((note) => ({
+      ...note,
+      title: `BREAKING CHANGES`,
+    }));
   
-    commit.type = transformCommitType(commit.type);
+    const type = transformCommitType(commit.type);
+    const scope = commit.scope === '*' ? '' : commit.scope;
+    const shortHash = typeof commit.hash === `string` ? commit.hash.substring(0, 7) : commit.shortHash;
+    let subject = commit.subject;
   
-    if (commit.scope === '*') {
-      commit.scope = '';
-    }
-  
-    if (typeof commit.hash === `string`) {
-      commit.shortHash = commit.hash.substring(0, 7);
-    }
-  
-    if (typeof commit.subject === `string`) {
+    if (typeof subject === `string`) {
       let url = context.repository
         ? `${context.host}/${context.owner}/${context.repository}`
         : context.repoUrl;
       if (url) {
         url = `${url}/issues/`;
         // Issue URLs.
-        commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
+        subject = subject.replace(/#([0-9]+)/g, (_, issue) => {
           issues.push(issue);
           return `[#${issue}](${url}${issue})`;
         });
       }
       if (context.host) {
         // User URLs.
-        commit.subject = commit.subject.replace(
+        subject = subject.replace(
           /\B@([a-z0-9](?:-?[a-z0-9/]){0,38})/g,
           (_, username) => {
             if (username.includes('/')) {
@@ -92,12 +88,19 @@ const releaseRules = [
       }
     }
   
-    // remove references that already appear in the subject
-    commit.references = commit.references.filter(
+    const references = (commit.references || []).filter(
       (reference) => issues.indexOf(reference.issue) === -1,
     );
   
-    return commit;
+    return {
+      ...commit,
+      notes,
+      type,
+      scope,
+      shortHash,
+      subject,
+      references,
+    };
   };
   
   module.exports = {
