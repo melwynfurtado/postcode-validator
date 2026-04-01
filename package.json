@@ -57,7 +57,7 @@
     "@semantic-release/npm": "^13.1.5",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.10.1",
+    "@types/node": "^25.5.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.0.1",
     "husky": "^9.0.11",
