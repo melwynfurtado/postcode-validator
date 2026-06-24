@@ -38,6 +38,8 @@ describe('postcodeValidator', () => {
       { postcode: '123456', country: 'US' },
       { postcode: '12345 6789', country: 'US' },
       { postcode: '1234567', country: 'GB' },
+      { postcode: 'SW1A 0A[', country: 'GB' },
+      { postcode: 'W6 8D]', country: 'GB' },
       { postcode: 'M5P@2N7', country: 'CA' },
       { postcode: 'M5K3D8', country: 'CA' },
       { postcode: '100-0005-9088', country: 'JP' },
