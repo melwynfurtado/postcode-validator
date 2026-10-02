@@ -97,7 +97,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.NP, /^\d{5}$/],
   [CountryCode.NZ, /^\d{4}$/],
   [CountryCode.NI, /^((\d{4}-)?\d{3}-\d{3}(-\d{1})?)?$/],
-  [CountryCode.NG, /^(\d{6})?$/],
+  [CountryCode.NG, /^(\d{6}|[A-Z]{2}[ -]?(0[1-9]|[1-9]\d)[ -]?[A-Z0-9]{3}[ -]?[A-Z]{2}[ -]?(0[1-9]|[1-9]\d))?$/i],
   [CountryCode.OM, /^(PC )?\d{3}$/],
   [CountryCode.PA, /^\d{4}$/],
   [CountryCode.PK, /^\d{5}$/],
