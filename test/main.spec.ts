@@ -31,6 +31,10 @@ describe('postcodeValidator', () => {
       { postcode: 'AI-2640', country: 'AI' },
       { postcode: '12345-12345', country: 'IR' },
       { postcode: 'CP 1101', country: 'SV' },
+      { postcode: '930283', country: 'NG' },
+      { postcode: 'EK-01-A03-FK-01', country: 'NG' },
+      { postcode: 'EK 01 A03 FK 01', country: 'NG' },
+      { postcode: 'ek01a03fk01', country: 'NG' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -67,6 +71,11 @@ describe('postcodeValidator', () => {
       { postcode: 'AI-2640X', country: 'AI' },
       { postcode: '12345-12345-99', country: 'IR' },
       { postcode: 'ASCN 1ZZ!', country: 'AC' },
+      { postcode: 'EK-01-A03-FK-1', country: 'NG' },
+      { postcode: 'EK-00-A03-FK-01', country: 'NG' },
+      { postcode: 'EK-01-A03-FK-00', country: 'NG' },
+      { postcode: 'EK-01-A03-FK-011', country: 'NG' },
+      { postcode: '93028', country: 'NG' },
     ];
 
     expect.assertions(invalidPostcodes.length);
