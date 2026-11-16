@@ -97,6 +97,9 @@ describe('postcodeValidator', () => {
       { postcode: '05200', country: 'NI' },
       { postcode: '5200', country: 'NI' },
       { postcode: '520001', country: 'NI' },
+      { postcode: '12345', country: 'PY' },
+      { postcode: '1104071', country: 'PY' },
+      { postcode: '110-407', country: 'PY' },
     ];
 
     expect.assertions(invalidPostcodes.length);
