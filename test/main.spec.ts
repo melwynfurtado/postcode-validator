@@ -44,6 +44,11 @@ describe('postcodeValidator', () => {
       { postcode: '52000', country: 'NI' },
       { postcode: '13024', country: 'NI' },
       { postcode: '10000', country: 'NI' },
+      { postcode: '96940', country: 'PW' },
+      { postcode: '96939', country: 'PW' },
+      { postcode: '96940-0001', country: 'PW' },
+      { postcode: '96799', country: 'AS' },
+      { postcode: '96799-9998', country: 'AS' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -100,6 +105,10 @@ describe('postcodeValidator', () => {
       { postcode: '12345', country: 'PY' },
       { postcode: '1104071', country: 'PY' },
       { postcode: '110-407', country: 'PY' },
+      { postcode: '96941', country: 'PW' },
+      { postcode: '96940-001', country: 'PW' },
+      { postcode: '96798', country: 'AS' },
+      { postcode: '96799-99981', country: 'AS' },
     ];
 
     expect.assertions(invalidPostcodes.length);
