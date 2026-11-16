@@ -37,6 +37,9 @@ describe('postcodeValidator', () => {
       { postcode: 'ek01a03fk01', country: 'NG' },
       { postcode: '120101', country: 'KH' },
       { postcode: '12000', country: 'KH' },
+      { postcode: '52000', country: 'NI' },
+      { postcode: '13024', country: 'NI' },
+      { postcode: '10000', country: 'NI' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -80,6 +83,11 @@ describe('postcodeValidator', () => {
       { postcode: '93028', country: 'NG' },
       { postcode: '1201', country: 'KH' },
       { postcode: '1201011', country: 'KH' },
+      { postcode: '123-456', country: 'NI' },
+      { postcode: '1234-123-456-7', country: 'NI' },
+      { postcode: '05200', country: 'NI' },
+      { postcode: '5200', country: 'NI' },
+      { postcode: '520001', country: 'NI' },
     ];
 
     expect.assertions(invalidPostcodes.length);
