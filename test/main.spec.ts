@@ -49,6 +49,9 @@ describe('postcodeValidator', () => {
       { postcode: '96940-0001', country: 'PW' },
       { postcode: '96799', country: 'AS' },
       { postcode: '96799-9998', country: 'AS' },
+      { postcode: '050012', country: 'KZ' },
+      { postcode: 'Z00Y5M3', country: 'KZ' },
+      { postcode: 'z00y5m3', country: 'KZ' },
     ];
 
     expect.assertions(validPostcodes.length);
@@ -109,6 +112,10 @@ describe('postcodeValidator', () => {
       { postcode: '96940-001', country: 'PW' },
       { postcode: '96798', country: 'AS' },
       { postcode: '96799-99981', country: 'AS' },
+      { postcode: '05001', country: 'KZ' },
+      { postcode: 'Z00Y5M', country: 'KZ' },
+      { postcode: 'Z00Y5M31', country: 'KZ' },
+      { postcode: 'ZA0Y5M3', country: 'KZ' },
     ];
 
     expect.assertions(invalidPostcodes.length);
