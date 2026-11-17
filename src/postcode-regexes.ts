@@ -4,11 +4,11 @@ import { CountryCode } from './postcode-types';
 export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [
     CountryCode.UK,
-    /^(([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-Z][A-Z]){1}|GIR[ ]?0AA)$/i,
+    /^(([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-Z][A-Z]){1}|GIR[ ]?0AA|BFPO[ ]?[0-9]{1,4})$/i,
   ],
   [
     CountryCode.GB,
-    /^(([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-Z][A-Z]){1}|GIR[ ]?0AA)$/i,
+    /^(([A-Z]){1}([0-9][0-9]|[0-9]|[A-Z][0-9][A-Z]|[A-Z][0-9][0-9]|[A-Z][0-9]|[0-9][A-Z]){1}([ ])?([0-9][A-Z][A-Z]){1}|GIR[ ]?0AA|BFPO[ ]?[0-9]{1,4})$/i,
   ],
   [CountryCode.JE, /^JE\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}$/],
   [CountryCode.GG, /^GY\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}$/],
