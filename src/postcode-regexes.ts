@@ -60,7 +60,7 @@ export const POSTCODE_REGEXES: Map<string, RegExp> = new Map([
   [CountryCode.CZ, /^\d{3}[ ]?\d{2}$/],
   [CountryCode.DO, /^\d{5}$/],
   [CountryCode.EC, /^([A-Z]\d{4}[A-Z]|(?:[A-Z]{2})?\d{6})?$/],
-  [CountryCode.EG, /^\d{5}$/],
+  [CountryCode.EG, /^(\d{5}|\d{7})$/],
   [CountryCode.EE, /^\d{5}$/],
   [CountryCode.FO, /^\d{3}$/],
   [CountryCode.GE, /^\d{4}$/],
